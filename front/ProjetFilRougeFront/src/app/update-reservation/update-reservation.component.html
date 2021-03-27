@@ -1,0 +1,30 @@
+<div class="container">
+    <div><br>
+        <h2>Modifier une reservation :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2"><br>
+            <label>Réference reservation</label>
+            <input readonly type="text" [(ngModel)]="currentReservation.idReservation" name="id" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>livre</label>
+            <input type="text" [(ngModel)]="currentReservation.livre" name="livre" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>client</label>
+            <input type="text" [(ngModel)]="currentReservation.client" name="client" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>date reservation </label>
+            <input type="number" [(ngModel)]="currentReservation.dateReservation" name="dateReservation" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>date retrait </label>
+            <input type="text" [(ngModel)]="currentReservation.dateRetrait" name="dateRetrait" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="updateReservation()" class="btn btn-success">Modifier</button>
+        </div>
+    </form>
+</div>

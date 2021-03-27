@@ -62,10 +62,7 @@ export class LivreService {
   //     this.ajouterLivre(l);
 
   // }
-  updateLivre(livre : Livre) : Observable<Livre>
-  {
-  return this.http.put<Livre>(this.apiURL+"/"+livre.reference, livre, httpOptions);
+  updateLivre(livre : Livre) : Observable<Livre> {
+    return this.http.put<Livre>(this.apiURL+"/"+livre.reference, livre, httpOptions);
   }
-
-
 }

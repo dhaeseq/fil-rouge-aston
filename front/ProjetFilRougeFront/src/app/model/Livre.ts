@@ -4,6 +4,4 @@ export class Livre {
     genre : string;
     quantite : number;
     auteur : string;
-    
-    }
-    
+}

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Réference</th><th>Client</th> <th>Livre</th> <th>Date de réservation</th> <th>Date de retrait</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let reservation of reservations">
+        <tr>
+          <td>{{reservation.idReservation}}</td>
+          <td>{{reservation.client.nom}}</td>
+          <td>{{reservation.livre.titre}}</td>
+          <td>{{reservation.dateReservation.toDateString()}}</td>
+          <td>{{reservation.dateRetrait.toDateString()}}</td>
+          <td><a class="btn btn-success" [routerLink]="['/updateReservation', reservation.idReservation]">Réserver</a></td>
+          <td><a class="btn btn-danger" (click)="supprimerReservation(reservation)">Rendre</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
